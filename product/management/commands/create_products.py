@@ -10,7 +10,7 @@ class Command(BaseCommand):
         fake = faker.Faker()
 
         books = []
-        for _ in range(10000):
+        for _ in range(100000):
             book = Product(
                 name=fake.sentence(nb_words=5),
                 category=fake.name(),
