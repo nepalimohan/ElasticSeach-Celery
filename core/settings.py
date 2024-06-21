@@ -14,7 +14,7 @@ SECRET_KEY = 'django-insecure-++(t8*=31mknmyhjz8r6091_s8%vp62ze3h7#i)_3k6=p6t#4m
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -76,7 +76,8 @@ DATABASES = {
 # settings.py
 ELASTICSEARCH_DSL = {
     'default': {
-        'hosts': 'http://localhost:9200'  # Ensure the URL is complete
+        'hosts': 'http://elasticsearch:9200'  # use this when using from docker for django app
+        # 'hosts': 'http://localhost:9200'  # and this when using in local without docker for django app
     },
 }
 

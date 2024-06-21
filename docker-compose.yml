@@ -18,6 +18,7 @@ services:
       - ALLOWED_HOSTS=localhost,127.0.0.1
     depends_on:
       - redis
+      - elasticsearch
 
   celery:
     container_name: celery
