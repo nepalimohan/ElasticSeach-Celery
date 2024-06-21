@@ -9,5 +9,6 @@ router.register(r'products', views.ProductViewSet, basename='product')
 
 
 urlpatterns = [
-    path('', include(router.urls))
+    path('', include(router.urls)),
+    path('product/search/', views.ProductSearch.as_view(), name='product_search')
 ]
