@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     
     'product',
+    'django_elasticsearch_dsl',
 ]
 
 MIDDLEWARE = [
@@ -80,6 +81,14 @@ DATABASES = {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
     }
+}
+
+
+# settings.py
+ELASTICSEARCH_DSL = {
+    'default': {
+        'hosts': 'http://localhost:9200'  # Ensure the URL is complete
+    },
 }
 
 
